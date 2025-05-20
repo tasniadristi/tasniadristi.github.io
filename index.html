@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Tasnia Nowrin - Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="vendors/linericon/style.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .project-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            background: #f9f9f9;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-card h4 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .project-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .btn-project {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-project:hover {
+            background-color: #0056b3;
+        }
+
+        .cv-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .cv-option {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        .cv-option:hover {
+            background-color: #f1f1f1;
+        }
+
+        .download-cv:hover .cv-dropdown {
+            display: block;
+        }
+
+        /* Thesis Card Style */
+        .thesis-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #eaf0f7;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .thesis-card h4 {
+            font-size: 1.3rem;
+            color: #007bff;
+        }
+
+        .thesis-card p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Icon and Emoji Styling */
+        .icon-text {
+            font-size: 1.1rem;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-text i {
+            margin-right: 8px;
+            color: #007bff;
+        }
+
+        .contact-btn,
+        .download-btn {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-btn:hover,
+        .download-btn:hover {
+            background-color: #218838;
+        }
+
+        .social-links a {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            color: #007bff;
+        }
+
+        .social-links a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="" style="max-height: 60px;"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
+							<li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                            <!-- <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+	<!-- Home Banner Section -->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="banner_content">
+							<h1 class="text-uppercase">I am Tasnia Nowrin</h1>
+							<p>Urban & Regional Planning Student || Aspiring MSc/PhD Researcher || GIS Specialist</p>
+							<div class="d-flex align-items-center">
+								<div class="download-cv">
+									<button class="primary_btn download-btn">Download CV</button>
+									<div class="cv-dropdown">
+										<a href="resume/SE_CV.pdf" class="cv-option" target="_blank">Software Engineer CV</a>
+										<a href="resume/Academic_CV.pdf" class="cv-option" target="_blank">Lecturer CV</a>
+									</div>
+								</div>
+								<a class="primary_btn contact-btn" href="mailto:donieltripura121@gmail.com"><span>Contact Me</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="home_right_img">
+							<img class="img-fluid" src="img/banner/home-right.png" alt="Doniel Tripura">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- About Section -->
+	<section id="about" class="about_area section_gap">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-5">
+					<div class="about_img">
+						<img class="img-fluid" src="img/about-us.png" alt="About Me">
+					</div>
+				</div>
+				<div class="offset-lg-1 col-lg-5">
+					<div class="main_title text-left">
+						<h2>About Me</h2>
+						<p>I am <strong>Tasia Nowrin</strong>, an undergrad student in Urban & Regional Planning department at <strong>KUET</strong> with a CGPA of <strong>3.97/4.00</strong>. I have strong passion for <strong>Geographic Information Systems (GIS)</strong>, <strong>Remote Sensing</strong> and <strong>Sustainable Urban Development</strong>. My academic journey has centered on <strong>spatial data analysis</strong>, <strong>land use planning</strong>, and <strong>environmental research</strong>, supported by hands-on experience with tools like <strong>ArcGIS</strong>, <strong>Google Earth Engine</strong>, <strong>SPSS</strong>, <strong>R</strong> and <strong>Python</strong>.</p>
+						<p>As a Research Assistant at the <a href="https://www.linkedin.com/company/center-for-environmental-research-cer/posts/?feedView=all" target="_blank"> Center for Environmental Research (CER)</a>, I’ve contributed to projects focused on climate change, urban resilience and on related fields. I also completed an internship at <a href="https://tiller.com.bd/" target="_blank">Tiller</a></strong>, where I worked on Mouza map scaling and land use zoning, also contributed in "Preparation of Risk Sensitive Database for Core Area of Rangpur and Sylhet District Town (SRDP)”.</p>
+						<p>Beyond academics, I co-founded an online clothing business, reflecting my entrepreneurial mindset. I have served as team leader in multiple lab-based projects, strengthening my skills in leadership, coordination, problem-solving, and communication under pressure. I’m now actively seeking <strong>TA/RA</strong> opportunities abroad to contribute to impactful research and continue my academic growth.
+
+						<p>In my academic and personal projects, I’ve used various technologies like <strong>Python, Google Earth Engine, SPSS, R, JavaScript, AutoCAD</strong>, and more.
+						<p><a href="#projects">View projects</a></p>
+						<p><a class="primary_btn" href="mailto:tasniaanowrinn@gmail.com"><span>Get in Touch</span></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+	<!-- Achievements Section -->
+	<section id="achievements" class="achievements_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>Achievements</h2>
+					</div>
+				</div>
+			</div>
+
+			<!-- Academic Achievements -->
+			<div class="row">
+				<div class="col-lg-12">
+					<h3>Academic Achievements</h3>
+				</div>
+				<!-- Achievement 1: Dean's Award -->
+				<div class="col-lg-4">
+					<div class="project-card">
+						<i class="fa fa-trophy" style="font-size: 2rem; color: #007bff;"></i>
+						<h4>Dean's Award - Khulna University of Engineering and Technology (KUET)</h4>
+						<p><strong>Average GPA:</strong> 3.93/4.00</p>
+						<p><strong>Session:</strong> 2019-2020</p>
+						<p>Dean's Award from the Faculty of Civil Engineering for achieving an outstanding academic result.</p>
+					</div>
+				</div>
+			   <!-- Achievement 2: Dean's Award -->
+				<div class="col-lg-4">
+					<div class="project-card">
+						<i class="fa fa-trophy" style="font-size: 2rem; color: #007bff;"></i>
+						<h4>Dean's Award - Khulna University of Engineering and Technology (KUET)</h4>
+																	<p><strong>Average GPA:</strong> 3.98/4.00</p>
+						<p><strong>Session:</strong> 2020-2021</p>
+						<p>Dean's Award from the Faculty of Civil Engineering for achieving an outstanding academic result.</p>
+					</div>
+				</div>
+			   <!-- Achievement 2: Technical and Compensatory Scholarship -->
+				<div class="col-lg-4">
+					<div class="project-card">
+						<i class="fa fa-trophy" style="font-size: 2rem; color: #007bff;"></i>
+						<h4>Technical and Compensatory Scholarship - Khulna University of Engineering and Technology (KUET)</h4>
+						<p><strong>Session:</strong> 2019-2020, 2020-2021, 2021-2022</p>
+						<p>Technical and Compensatory Scholarship from the University for achieving outstanding academic performance in First, Second and Third Year.</p>
+					</div>
+				</div>
+		   </div>
+	    </div>
+	</section>
+
+
+	<!-- Research Section -->
+	<section id="research" class="research_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>Research</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Thesis 1: Urban Growth Dynamics and Socioeconomic Drivers in Khulna: A Spatiotemporal Perspective  -->
+				<div class="col-lg-12">
+					<div class="thesis-card">
+						<h4><i class="fa fa-book" style="font-size: 1.5rem; color: #007bff;"></i> THESIS: Urban Growth Dynamics and Socioeconomic Drivers in Khulna: A Spatiotemporal Perspective </h4>
+						<p><strong>Technologies Used:</strong> Google Earth Engine, ArcGIS, JavaScript, Excel, SPSS, Random Forest</p>
+						<p>This research aims to analyze the spatiotemporal dynamics of urban expansion in Khulna City during 2000 to 2024 using Remote Sensing and Socioeconomic Indicators (2020–2020): integrating <strong>binary classification, spatial statistics geographic distribution tools</strong> as well as <strong>geographic information systems (GIS).</strong></p>
+						<p><strong>Key Focus:</strong> Urban sprawl, Driving mechanism, PCA model, Khulna city area </p>
+						<p><strong>GitHub Repository:</strong> <a href="https://github.com/MachangDoniel/Diabetes-Prediction" target="_blank">View Repository</a></p>
+					</div>
+				</div>
+
+				<!-- Additional Research Projects -->
+				<div class="col-lg-12">
+					<div class="thesis-card">
+						<h4><i class="fa fa-flask" style="font-size: 1.5rem; color: #007bff;"></i></h4>
+						<p><strong></strong></p>
+						<p><strong></strong></p>
+						<p></p>
+						<p><strong></strong> <a href="" target="_blank"></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+    <!-- Projects Section -->
+	<section id="projects" class="projects_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>Projects</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Project 5: Regional Economics Analysis of Rajshahi Division -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Heart">Regional Economics Analysis of Rajshahi Division</a></h4>
+						<p><strong>Course: </strong>Regional Planning Studio</p>
+						<p><strong>Technologies Used:</strong> Secondary data collection, SPSS, ArcGIS, Excel.</p>
+						<p><strong>Key Skills Applied: </strong> Team leadership, Secondary data collection, Non-Spatial Analysis (Location Quotient (LQ), Industrial Diversity Indices (HHI, Entropy), Shift share), Spatial Analysis (Lorenz curve, Spatial Gini, Spatial Auto Correlation), Principle Components Analysis (PCA) Industry concentration mapping, Employment shift modeling, Inequality measurement, GIS-based visualization, Regional planning diagnostics, and Evidence-based policy recommendation design.</p>
+						<p>A regional inequality analysis system that uses spatial and non-spatial tools to assess employment shifts, industrial concentration, market diversity, and wage disparities in Rajshahi Division, enabling data-driven recommendations for inclusive economic development.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Heart">View Project</a>
+					</div>
+				</div>
+
+				<!-- Project 2: Assessment of Child Friendliness in Ispahani Colony, Khulna -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/KUET-BANK">Assessment of Child Friendliness in Ispahani Colony, Khulna</a></h4>
+						<p><strong>Course: </strong> Environmental Planning Studio</p>
+						<p><strong>Technologies Used:</strong> Field surveys, Questionnaire Survey, SPSS.</p>
+						<p><strong>Key Skills Applied: </strong>Team leadership, Statistical analysis, Community interviews and stakeholder engagement, Socio-environmental evaluation and Participatory planning, Child poverty indexing, Baseline condition assessment, Policy framing and context-sensitive recommendations, Questionnaire preparation.</p>
+						<p>A child-friendliness assessment of Ispahani Shramik Colony by evaluating provision, protection, and participation; identified critical issues like abuse, malnutrition, and gender bias; and proposed targeted interventions to create a safer, more inclusive environment for children.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Project</a>
+						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Questionnaire</a>
+					</div>
+				</div>
+				<!-- Project 6: TRANSPORTATION SURVEYS -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Night_Security_Light">Transportation Surveys</a></h4>
+						<p><strong>Course: </strong>Transportation Planning Studio</p>
+						<p><strong>Technologies Used: </strong>Google Earth, Excel, AutoCAD, Traffic surveys.</p>
+						<p><strong>Key Skills Applied: </strong> Team leading, Traffic data collection and analysis, Traffic surveys (Cross sectional survey, Traffic volume survey, Spot speed survey, Headway survey, Moving observer, Parking survey, Intersection survey), Questionnaire preparation, Roadway condition assessment, Journey speed calculation, PCU-based traffic evaluation, Parking demand estimation, Data visualization (Excel), IRC standard comparison, Field coordination, Report writing, Urban transport planning.</p>
+						<p>Conducted a comprehensive transportation survey addressing road condition, real-time traffic flow, speed and headway monitoring, parking usage, and intersection performance to support data-driven urban transport solutions.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Night_Security_Light">View Project</a>
+					</div>
+				</div>
+
+				<!-- Project 3: Comparative Analysis of Smart Village Potential: Evaluating the Smartness of Botiaghata and Betaga Union -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/DoRa-Block-Battle">Comparative Analysis of Smart Village Potential: Evaluating the Smartness of Botiaghata and Betaga Union</a></h4>
+						<p><strong>Course:</strong> Rural Planning Studio </p>
+						<p><strong>Technologies Used:</strong> Statistical analysis, Field surveys, SPSS, ArcGIS.</p>
+
+						<p><strong>Key Skills Applied: </strong> Team leadership, Data collection, Comparative research, Rural planning, Technological assessment, Baseline study, GIS mapping, Statistical analysis, Data Sampling, Local and Global smart village component identification, Report writing.</p>
+
+						<p>A smart village development study comparing Betaga Union and Botiaghata through questionnaire surveys and analysis, focusing on digital healthcare, smart utilities, and education technology to enhance rural living and guide the transformation of Hatbaria Hat into a fully functional smart village.
+</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/DoRa-Block-Battle">View Project</a>
+						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Questionnaire</a>
+					</div>
+				</div>
+				<!-- Project 1: Heritage Site Restoration Master Plan of The Mosque City of Bagerhat -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Foodier">Heritage Site Restoration Master Plan of The Mosque City of Bagerhat</a></h4>
+						<p><strong>Course: </strong>Project Planning Studio</p>
+						<p><strong>Key Skills Applied: </strong>DPP structuring, Feasibility analysis, Restoration planning, Stakeholder engagement, Financial evaluation (NPV, IRR, CVM), Logframe development, Environmental impact assessment, Proposal writing and development, Project budgeting, Policy alignment.</p>
+
+						<p>This project simulates a real-world Development Project Proposal (DPP) aimed at restoring seven historic mosques in Bagerhat, a UNESCO World Heritage Site, featuring the conservation of seven historic mosques, infrastructure upgrades, landscaping, and visitor facilities to promote cultural preservation and boost sustainable tourism.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Foodier">View Project</a>
+					</div>
+				</div>
+				<!-- Project 4: Terms of Reference for Heritage Site Restoration Master Plan of Mosque City of Bagerhat  -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/KUET-BANK">Terms of Reference for Heritage Site Restoration Master Plan of Mosque City of Bagerhat</a></h4>
+						<p><strong>Course: </strong>Project Planning Studio</p>
+						<p><strong>Key Skills Applied: </strong>ToR structuring, Policy review, Restoration planning, Stakeholder analysis, Proposal writing.</p>
+						<p>Simulated a Terms of Reference (ToR) for the restoration of seven UNESCO-listed mosques in Bagerhat outlining scope, methodology, stakeholder roles, and timelines. The project emphasized cultural integrity, infrastructure upgrades, sustainable site management, and community engagement. Focus areas covered stakeholder mapping, heritage-sensitive infrastructure planning, structural restoration, utility upgrades, and tourism-oriented development strategies.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Project</a>
+					</div>
+				</div>
+
+				<!-- Project 7: Enhancing Food Security and Agricultural Resilience in Khulna, Bangladesh-->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Alphabet-Detection">Enhancing Food Security and Agricultural Resilience in Khulna, Bangladesh</a></h4>
+						<p><strong>Course: </strong>Urban Planning Studio</p>
+						<p><strong>Key Skills Applied: </strong> AHP-based multi-criteria decision analysis, GIS & remote sensing (NDVI, LST), Field survey & stakeholder consultation, Urban agriculture & sustainability planning, Data analysis (Excel, GIS), Policy and institutional assessment, Research synthesis & technical reporting</p>
+						<p>An integrated green infrastructure-based urban agriculture initiative that applies the Analytical Hierarchy Process (AHP) and a decision-making framework to identify vacant lands and prioritize factors for rooftop and community gardens, aiming to strengthen food security and urban sustainability in Khulna City.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Alphabet-Detection">View Project</a>
+					</div>
+				</div>
+
+				<!-- Project 8: Threshold Population Calculation and Gap identification of different service facilities in Rajshahi Division  -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Automatic-Bill-Generator">Threshold Population Calculation and Gap identification of different service facilities in Rajshahi Division </a></h4>
+						<p><strong>Course: </strong>Reginal Planning Studio</p>
+						<p><strong>Key Skills Applied: </strong> Geospatial analysis, Team leadership, Spatial data analysis, Secondary data collection, GIS-based visualization, Gap identification, Spatial planning, Threshold Population Calculation, Data visualization.</p>
+						<p>A district-wise breakdown of educational, recreational, and healthcare infrastructure in Rajshahi Division identifying threshold population and highlighting gaps and disparities to support equitable infrastructure distribution and inclusive policy reforms.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Automatic-Bill-Generator">View Project</a>
+					</div>
+				</div>
+
+				<!-- Project 9: Water Scarcity in Rajshahi Division: A feasibility Study for Sustainable Solutions -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Auto-Birthday-Wisher">Water Scarcity in Rajshahi Division: A feasibility Study for Sustainable Solutions</a></h4>
+						<p><strong>Course: </strong>Reginal Planning Studio</p>
+						<p><strong>Key Skills Applied: </strong> Meta-analysis, Data Visualization, Sustainable water management, Statistical analysis, Rainwater Harvesting potential, Urban Planning & Policy Application, Feasibility Analysis, Team leader, Setback Rule Implementation, Presentation & Documentation.</p>
+						<p>Assessed water scarcity in Rajshahi by identifying causes, impacts, and practical solutions. Proposed rainwater harvesting and setback rule enforcement to enhance groundwater recharge and ensure sustainable water management.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Auto-Birthday-Wisher">View Project</a>
+					</div>
+				</div>
+
+				<!-- Project 10: Sustainable Desalination Technologies: A Solution to Coastal Water Scarcity in Bangladesh -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Hospital_Management_System">Sustainable Desalination Technologies: A Solution to Coastal Water Scarcity in Bangladesh</a></h4>
+						<p><strong>Segment: Presented at: </strong>The Research Canvas, <strong>Plannation 3.0</strong>, Dept. of Urban and Regional Planning, Khulna University of Engineering & Technology</p>
+						<p><strong>Key Skills Applied: </strong>Renewable energy integration, Cost-benefit analysis, Desalination technology evaluation, Environmental impact assessment, GIS-based mapping, Proposed root level solution, Visual communication (poster design), Research and data synthesis, Strategic planning & policy recommendation</p>
+						<p>Explored solar-powered reverse osmosis (PV-RO) as a cost-effective, low-energy solution to coastal water scarcity in Bangladesh. Compared desalination methods (RO, MSF, MED), identifying PV-RO as most suitable due to high solar potential. Proposed small-scale units, membrane supply networks, and stakeholder collaboration.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Hospital_Management_System">View Project</a>
+					</div>
+				</div>
+
+				<!-- Project 11: Site Introduction and Material Analysis for Designing a Camp House: Hang Sơn Đoòng Cave -->
+				<div class="col-lg-4 col-md-6">
+					<div class="project-card">
+						<h4><a href="https://github.com/MachangDoniel/Kokborok-Compiler">Site Introduction and Material Analysis for Designing a Camp House: Hang Sơn Đoòng Cave</a></h4>
+						<p><strong>Course: </strong> Basic Design in Architecture</p>
+						<p><strong>Key Skills Applied: </strong> Climate-responsive architectural design, Site analysis, Sustainable material sourcing, Vernacular Architecture, Survival planning & risk management, Visual mapping, Presentation & technical communication. </p>
+						<p>Designed a climate-responsive camp house in Hang Sơn Đoòng—the world’s largest cave— considering site safety, resource availability, and environmental sensitivity using local materials. Selected a safe site near Doline 2 based on geological, climatic, and ecological analysis. Planned for shelter, water, food, sanitation, and fire safety.</p>
+						<a class="btn-project" href="https://github.com/MachangDoniel/Kokborok-Compiler">View Project</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Experience Section -->
+	<section id="experience" class="experience_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>Experience</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<!-- Experience 1: INTERNSHIP -->
+				<div class="col-lg-12">
+					<div class="project-card">
+						<i class="fa fa-chalkboard-teacher" style="font-size: 2rem; color: #007bff;"></i>
+						<h4>Internship - Tiller (On-Site)</h4>
+						<p><strong>Time Period:</strong> October, 2025</p>
+						<p><strong>Responsibilities:</strong></p>
+						<ul>
+							<li>Contributed to the “Preparation of Risk Sensitive Database for Core Area of Rangpur and Sylhet District Town (SRDP)” project.</li>
+							<li>Assisted in Mouza map scaling and land use zoning map preparation for risk-sensitive planning.</li>
+							<li>Demonstrated punctuality, diligence, and eagerness to learn in a professional planning environment.</li>
+							<li>Gained hands-on experience with urban spatial data processing and risk-sensitive zoning practices.</li>
+						</ul>
+						<a class="btn-project" href="https://tiller.com.bd/" target="_blank">Visit Tiller</a>
+					</div>
+				</div>
+		</div>
+				<!-- Experience 2: Research Assistant -->
+				<div class="col-lg-12">
+					<div class="project-card">
+						<i class="fa fa-chalkboard-teacher" style="font-size: 2rem; color: #007bff;"></i>
+						<h4>Research Assistant - Center for Environmental Research (CER)</h4>
+						<p><strong>Time Period:</strong> April, 2022 - Present</p>
+						<p><strong>Responsibilities:</strong></p>
+						<ul>
+							<li>Contributing to research on geospatial, environmental sustainability and urban planning.</li>
+							<li>Focusing on GIS analysis, spatial analysis, and data visualization.</li>
+							<li>Assisting with report preparation, data collection, and analysis using tools like Google Earth Engine, ArcGIS, and Python.</li>
+							<li>Collaborating with the team to support research findings and academic publications.</li>
+						</ul>
+						<a class="btn-project" href="https://www.linkedin.com/company/center-for-environmental-research-cer/posts/?feedView=all" target="_blank">Visit CER</a>
+					</div>
+				</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="contact_area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title text-left">
+						<h2>Contact Me</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-lg-8">
+					<form id="contactForm" class="contact_form">
+						<div class="form-group">
+							<input type="text" id="name" class="form-control" name="name" placeholder="Your Name" required>
+						</div>
+						<div class="form-group">
+							<input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required>
+						</div>
+						<div class="form-group">
+							<textarea id="message" class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+						</div>
+						<button type="submit" class="primary_btn contact-btn">Send Email</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<!-- Footer Section -->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12 text-center">
+					<div class="footer_top">
+						<h4>Follow Me</h4>
+						<div class="social-links">
+							<a href="https://www.linkedin.com/in/doniel-tripura-7a82281b9/"><i class="fa fa-linkedin"></i></a>
+							<a href="https://github.com/MachangDoniel"><i class="fa fa-github"></i></a>
+							<a href="https://x.com/TripuraDoniel"><i class="fa fa-twitter"></i></a>
+							<a href="https://www.facebook.com/doniel.tripura.1"><i class="fa fa-facebook"></i></a>
+							<!-- YouTube Icon added -->
+							<a href="https://www.youtube.com/@donieltripura3323" target="_blank"><i class="fa fa-youtube"></i></a>
+						</div>
+					</div>
+					<p id="lastModifiedDate">Last Modified: </p>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+    <!-- Optional JavaScript -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+</body>
+
+</html>
+
+<script>
+	// JavaScript to handle mailto action with dynamic content
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Collect the message data
+        const message = document.getElementById('message').value;
+
+        // Create mailto link with subject and only the message body
+        const subject = "Contact Form Submission";  // You can modify the subject here
+        const body = `Message: ${encodeURIComponent(message)}`;  // Only the message
+
+        // Create the mailto link
+        const mailtoLink = `mailto:donieltripura121@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+        // Open the default email client with the pre-filled mailto link
+        window.location.href = mailtoLink;
+    });
+
+    // JavaScript to display last modified date
+    document.getElementById('lastModifiedDate').innerHTML = "Last Modified: " + document.lastModified;
+</script>
