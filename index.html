@@ -223,7 +223,6 @@
 				background-clip: border-box;
 			}
 		}
-
 		h2{
 			color: #69C052;
 		}
@@ -356,9 +355,9 @@
 		<div class="banner_inner">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-7">
+					<div class="col-lg-7" style="align-self: end;">
 						<div class="banner_content">
-							<h1 class="text-uppercase">I am Tasnia Nowrin</h1>
+							<h1 class="text-uppercase" id="typewriter"></h1>
 							<p>Urban & Regional Planning Student || Aspiring MSc/PhD Researcher || GIS Specialist</p>
 							<div class="d-flex align-items-center">
 								<a href="resume/Final_CV.pdf" class="cv-option" target="_blank"><button class="primary_btn download-btn"><span>Download CV</span></button></a>
@@ -791,6 +790,31 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const el = document.getElementById("typewriter");
+    const processedText = "Hello! I'm\n Tasnia Nowrin"
+    let i = 0;
+    const speed = 40;
+
+    function typeWriter() {
+      if (i < processedText.length) {
+        const currentChar = processedText.charAt(i);
+        if (currentChar === '\n') {
+          el.innerHTML += "<br/>";
+        } else {
+          el.innerHTML += currentChar;
+        }
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+
+    // Start typing
+    el.innerHTML = "";
+    typeWriter();
+  });
+</script>
 
 
 <script>
