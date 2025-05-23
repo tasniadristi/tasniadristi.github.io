@@ -14,34 +14,54 @@
     <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .project-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            background: #f9f9f9;
-        }
+		/* Project Card Style - Green Themed */
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-        }
 
-        .project-card h4 {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-        }
 
-        .project-card p {
-            font-size: 1rem;
-            color: #555;
-        }
+		.project-card {
+			border: 1px solid #cfead8;
+			border-radius: 8px;
+			padding: 20px;
+			margin-bottom: 20px;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 10px rgba(76, 175, 80, 0.1);
+			background: linear-gradient(to top right, #ecfdf5, #d8f5e0);
+			position: relative;
+			overflow: hidden;
+			min-height: 400px; /* You can adjust this as needed */
+		}
 
-        .btn-project {
-            background-color: #007bff;
+		.project-card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 6px 15px rgba(76, 175, 80, 0.25);
+		}
+
+		.project-card h4 {
+			font-size: 1.2rem;
+			font-weight: bold;
+			color: #46815C;
+		}
+
+		.project-card h4:hover {
+			color: #69C052;
+		}
+
+		.project-card a {
+			color:#3e7451 ;
+		}
+
+		.project-card a:hover {
+			color: #69C052;
+		}
+
+		.project-card p {
+			font-size: 1rem;
+			color: #3c4b3c;
+		}
+
+				
+        .project-card .btn-project {
+			background-color: #28a745;
             color: white;
             border: none;
             border-radius: 4px;
@@ -50,9 +70,29 @@
             transition: background-color 0.3s ease;
         }
 
-        .btn-project:hover {
-            background-color: #0056b3;
+        .project-card .btn-project:hover {
+            background-color: #218838;
+			color:wheat
         }
+
+		.project-description {
+			max-height: 190px;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.project-card.expanded .project-description {
+			max-height: 1000px; /* allow expansion */
+		}
+		.toggle-btn {
+			color: #007bff;
+			background: none;
+			border: none;
+			padding: 0;
+			font-size: 0.95rem;
+			cursor: pointer;
+		}
+
 
         .cv-dropdown {
             display: none;
@@ -76,25 +116,26 @@
             background-color: #f1f1f1;
         }
 
-        /* Thesis Card Style */
-        .thesis-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background: #eaf0f7;
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
+		/* Thesis Card Style - Green Themed */
+		.thesis-card {
+			border: 1px solid #cde8d3;
+			border-radius: 8px;
+			background: linear-gradient(to bottom right, #e8f5e9, #d0f0dc);
+			padding: 20px;
+			box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
+			margin-bottom: 20px;
+		}
 
-        .thesis-card h4 {
-            font-size: 1.3rem;
-            color: #007bff;
-        }
+		.thesis-card h4 {
+			font-size: 1.3rem;
+			color: #2e7d32;
+		}
 
-        .thesis-card p {
-            font-size: 1rem;
-            color: #333;
-        }
+		.thesis-card p {
+			font-size: 1rem;
+			color: #2d3e2e;
+		}
+
 
         /* Icon and Emoji Styling */
         .icon-text {
@@ -136,6 +177,147 @@
 		.section_gap{
 			padding: 100px;
 		}
+
+		.primary_btn {
+			display: inline-block;
+			color: #3e0738;
+			letter-spacing: 0px;
+			font-family: "Rubik", sans-serif;
+			font-weight: 500;
+			font-size: 14px;
+			line-height: 46px;
+			outline: none !important;
+			text-align: center;
+			cursor: pointer;
+			text-transform: uppercase;
+			border-radius: 5px;
+			background-origin: border-box;
+			background-clip: content-box, border-box;
+			background-image: linear-gradient(to right, #ff69b4 0%, #ffb6c1 100%), /* Hot Pink to Light Pink */
+				radial-gradient(circle at top left, #ff69b4, #ffb6c1);
+			border: double 2px transparent;
+			box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.3); /* Matching pink glow */
+			span {
+				padding: 0 42px;
+			}
+			&.tr-bg {
+				background-image: linear-gradient(#ffffff, #ffffff),
+					radial-gradient(circle at top left, #ff69b4, #ffb6c1);
+				border: 2px solid transparent;
+				color: #222222;
+				box-shadow: none;
+				&:hover {
+					background-image: linear-gradient(to right, #ff69b4 0%, #ffb6c1 100%),
+						radial-gradient(circle at top left, #ff69b4, #ffb6c1);
+					border: double 2px transparent;
+					color: #ffffff;
+					box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.3);
+				}
+			}
+			&:hover {
+				background-image: linear-gradient(#ffffff, #ffffff),
+					radial-gradient(circle at top left, #ff69b4, #ffb6c1);
+				border: 2px solid #ffb6c1;
+				color: #210ce6;
+				box-shadow: none;
+				background-clip: border-box;
+			}
+		}
+
+		h2{
+			color: #69C052;
+		}
+
+
+		* {box-sizing:border-box}
+
+		/* Slideshow container */
+		.slideshow-container {
+		max-width: 1000px;
+		position: relative;
+		margin: auto;
+		}
+
+		/* Hide the images by default */
+		.mySlides {
+		display: none;
+		}
+
+		/* Next & previous buttons */
+		.prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color: white;
+		font-weight: bold;
+		font-size: 18px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		background-color: rgba(0,0,0,0.8);
+		}
+
+		/* Caption text */
+		.text {
+		color: #f2f2f2;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		text-align: center;
+		background: linear-gradient(to right, rgba(34, 34, 34, 0.8), rgba(0, 0, 0, 0.6));
+		backdrop-filter: blur(2px); /* Optional: adds a subtle blur behind text */
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		color: #f2f2f2;
+		font-size: 12px;
+		padding: 8px 12px;
+		position: absolute;
+		top: 0;
+		}
+
+		/* The dots/bullets/indicators */
+		.dot {
+		cursor: pointer;
+		height: 15px;
+		width: 15px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+		}
+
+		.active, .dot:hover {
+		background-color: #717171;
+		}
+
+		/* Fading animation */
+		.fade {
+		animation-name: fade;
+		animation-duration: 5s;
+		}
+
+		@keyframes fade {
+		from {opacity: .4}
+		to {opacity: 1}
+		}
     </style>
 </head>
 
@@ -146,7 +328,7 @@
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
-                    <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt="" style="max-height: 60px;"></a>
+                    <a class="navbar-brand logo_h" href="index.html" style="padding-top: 0px;"><img src="img/banner/logo.png" alt="" style="max-height: 60px; "></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -154,7 +336,7 @@
                     </button>
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav justify-content-end">
-                            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                             <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
 							<li class="nav-item"><a class="nav-link" href="#achievements">Achievements</a></li>
 							<li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
@@ -186,7 +368,7 @@
 					</div>
 					<div class="col-lg-5">
 						<div class="home_right_img">
-							<img class="img-fluid" src="img/banner/Avater_Tasnia.png" alt="Doniel Tripura">
+							<img class="img-fluid" src="img/banner/Avater_Tasnia.png" alt="Tasnia Dristi">
 						</div>
 					</div>
 				</div>
@@ -199,20 +381,44 @@
 	<section id="about" class="about_area section_gap">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
-				<div class="col-lg-5">
-					<div class="about_img">
-						<img class="img-fluid" src="img/about-us.png" alt="About Me">
+				<div class="col-lg-5" style="padding: 0px;">
+					<div class="slideshow-container">
+						<div class="mySlides fade">
+							<div class="numbertext">1 / 3</div>
+							<img src="img/Images for Portfolio/Deans_Award_Receive.jpg" alt="hudai" style="width:100%">
+							<div class="text">Receiving Deans Award for Academic Excellence!</div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">2 / 3</div>
+							<img src="img/Images for Portfolio/Internship_Award_2.jpg" alt="hudai" style="width:100%">
+							<div class="text">Receiving my Internship Certification from Tiller!</div>
+						</div>
+
+						<div class="mySlides fade">
+							<div class="numbertext">3 / 3</div>
+							<img src="img/Images for Portfolio/Hall_Award_1.jpg" alt="hudai" style="width:100%">
+							<div class="text">Receiving the Undergraduate Completion Award from our esteemed Hall Provosts!</div>
+						</div>
+
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+					</div>
+					<br>
+					<div style="text-align:center">
+						<span class="dot" onclick="currentSlide(1)"></span> 
+						<span class="dot" onclick="currentSlide(2)"></span> 
+						<span class="dot" onclick="currentSlide(3)"></span> 
 					</div>
 				</div>
-				<div class="offset-lg-1 col-lg-5">
-					<div class="main_title text-left">
+				<div class="col-lg-7">
+					<div class="main_title text-left" style="margin-left: 18px;">
 						<h2>About Me</h2>
-						<p><strong>I'm</strong>an undergrad student in Urban & Regional Planning department at <strong>KUET</strong> with a CGPA of <strong>3.97/4.00</strong>. I have strong passion for <strong>Geographic Information Systems (GIS)</strong>, <strong>Remote Sensing</strong> and <strong>Sustainable Urban Development</strong>. My academic journey has centered on <strong>spatial data analysis</strong>, <strong>land use planning</strong>, and <strong>environmental research</strong>, supported by hands-on experience with tools like <strong>ArcGIS</strong>, <strong>Google Earth Engine</strong>, <strong>SPSS</strong>, <strong>R</strong> and <strong>Python</strong>.</p>
+						<p><strong>I'm</strong> an undergrad student in Urban & Regional Planning department at <strong>KUET</strong> with a CGPA of <strong>3.97/4.00</strong>. I have strong passion for <strong>Geographic Information Systems (GIS)</strong>, <strong>Remote Sensing</strong> and <strong>Sustainable Urban Development</strong>. My academic journey has centered on <strong>spatial data analysis</strong>, <strong>land use planning</strong>, and <strong>environmental research</strong>, supported by hands-on experience with tools like <strong>ArcGIS</strong>, <strong>Google Earth Engine</strong>, <strong>SPSS</strong>, <strong>R</strong> and <strong>Python</strong>.</p>
 						<p>As a Research Assistant at the <a href="https://www.linkedin.com/company/center-for-environmental-research-cer/posts/?feedView=all" target="_blank"> Center for Environmental Research (CER)</a>, I’ve contributed to projects focused on climate change, urban resilience and on related fields. I also completed an internship at <a href="https://tiller.com.bd/" target="_blank">Tiller</a></strong>, where I worked on Mouza map scaling and land use zoning, also contributed in "Preparation of Risk Sensitive Database for Core Area of Rangpur and Sylhet District Town (SRDP)”.</p>
 						<p>Beyond academics, I co-founded an online clothing business, reflecting my entrepreneurial mindset. I have served as team leader in multiple lab-based projects, strengthening my skills in leadership, coordination, problem-solving, and communication under pressure. I’m now actively seeking <strong>TA/RA</strong> opportunities abroad to contribute to impactful research and continue my academic growth.
 
 						<p>In my academic and personal projects, I’ve used various technologies like <strong>Python, Google Earth Engine, SPSS, R, JavaScript, AutoCAD</strong>, and more.
-						<p><a href="#projects">View projects</a></p>
 						<p><a class="primary_btn" href="mailto:tasniaanowrinn@gmail.com"><span>Get in Touch</span></a></p>
 					</div>
 				</div>
@@ -291,7 +497,7 @@
 						<p><strong>Technologies Used:</strong> Google Earth Engine, ArcGIS, JavaScript, Excel, SPSS, Random Forest</p>
 						<p>This research aims to analyze the spatiotemporal dynamics of urban expansion in Khulna City during 2000 to 2024 using Remote Sensing and Socioeconomic Indicators (2020–2020): integrating <strong>binary classification, spatial statistics geographic distribution tools</strong> as well as <strong>geographic information systems (GIS).</strong></p>
 						<p><strong>Key Focus:</strong> Urban sprawl, Driving mechanism, PCA model, Khulna city area </p>
-						<p><strong>GitHub Repository:</strong> <a href="https://github.com/MachangDoniel/Diabetes-Prediction" target="_blank">View Repository</a></p>
+						<p><strong>GitHub Repository:</strong> <a href="https://github.com/" target="_blank">View Repository</a></p>
 					</div>
 				</div>
 			</div>
@@ -312,128 +518,158 @@
 				<!-- Project 5: Regional Economics Analysis of Rajshahi Division -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Heart">Regional Economics Analysis of Rajshahi Division</a></h4>
+						<h4><a href="https://github.com/">Regional Economics Analysis of Rajshahi Division</a></h4>
 						<p><strong>Course: </strong>Regional Planning Studio</p>
 						<p><strong>Technologies Used:</strong> Secondary data collection, SPSS, ArcGIS, Excel.</p>
-						<p><strong>Key Skills Applied: </strong> Team leadership, Secondary data collection, Non-Spatial Analysis (Location Quotient (LQ), Industrial Diversity Indices (HHI, Entropy), Shift share), Spatial Analysis (Lorenz curve, Spatial Gini, Spatial Auto Correlation), Principle Components Analysis (PCA) Industry concentration mapping, Employment shift modeling, Inequality measurement, GIS-based visualization, Regional planning diagnostics, and Evidence-based policy recommendation design.</p>
-						<p>A regional inequality analysis system that uses spatial and non-spatial tools to assess employment shifts, industrial concentration, market diversity, and wage disparities in Rajshahi Division, enabling data-driven recommendations for inclusive economic development.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Heart">View Project</a>
+						
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Team leadership, Secondary data collection, Non-Spatial Analysis (Location Quotient Industrial Diversity Indices (HHI, Entropy), Shift share), Spatial Analysis (Lorenz curve, Spatial Gini, Spatial Auto... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+<!-- 					<p><strong>Key Skills Applied: </strong> Team leadership, Secondary data collection, Non-Spatial Analysis (Location Quotient (LQ), Industrial Diversity Indices (HHI, Entropy), Shift share), Spatial Analysis (Lorenz curve, Spatial Gini, Spatial Auto Correlation), Principle Components Analysis (PCA) Industry concentration mapping, Employment shift modeling, Inequality measurement, GIS-based visualization, Regional planning diagnostics, and Evidence-based policy recommendation design.</p>
+						<p>A regional inequality analysis system that uses spatial and non-spatial tools to assess employment shifts, industrial concentration, market diversity, and wage disparities in Rajshahi Division, enabling data-driven recommendations for inclusive economic development.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 
 				<!-- Project 2: Assessment of Child Friendliness in Ispahani Colony, Khulna -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/KUET-BANK">Assessment of Child Friendliness in Ispahani Colony, Khulna</a></h4>
+						<h4><a href="https://github.com/">Assessment of Child Friendliness in Ispahani Colony, Khulna</a></h4>
 						<p><strong>Course: </strong> Environmental Planning Studio</p>
 						<p><strong>Technologies Used:</strong> Field surveys, Questionnaire Survey, SPSS.</p>
-						<p><strong>Key Skills Applied: </strong>Team leadership, Statistical analysis, Community interviews and stakeholder engagement, Socio-environmental evaluation and Participatory planning, Child poverty indexing, Baseline condition assessment, Policy framing and context-sensitive recommendations, Questionnaire preparation.</p>
-						<p>A child-friendliness assessment of Ispahani Shramik Colony by evaluating provision, protection, and participation; identified critical issues like abuse, malnutrition, and gender bias; and proposed targeted interventions to create a safer, more inclusive environment for children.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Project</a>
-						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Questionnaire</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Team leadership, Statistical analysis, Community interviews and stakeholder engagement, Socio-environmental evaluation and Participatory planning, Child poverty... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong>Team leadership, Statistical analysis, Community interviews and stakeholder engagement, Socio-environmental evaluation and Participatory planning, Child poverty indexing, Baseline condition assessment, Policy framing and context-sensitive recommendations, Questionnaire preparation.</p>
+						<p>A child-friendliness assessment of Ispahani Shramik Colony by evaluating provision, protection, and participation; identified critical issues like abuse, malnutrition, and gender bias; and proposed targeted interventions to create a safer, more inclusive environment for children.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
+						<a class="btn-project" href="https://github.com/">View Questionnaire</a>
 					</div>
 				</div>
 				<!-- Project 6: TRANSPORTATION SURVEYS -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Night_Security_Light">Transportation Surveys</a></h4>
+						<h4><a href="https://github.com/">Transportation Surveys</a></h4>
 						<p><strong>Course: </strong>Transportation Planning Studio</p>
 						<p><strong>Technologies Used: </strong>Google Earth, Excel, AutoCAD, Traffic surveys.</p>
-						<p><strong>Key Skills Applied: </strong> Team leading, Traffic data collection and analysis, Traffic surveys (Cross sectional survey, Traffic volume survey, Spot speed survey, Headway survey, Moving observer, Parking survey, Intersection survey), Questionnaire preparation, Roadway condition assessment, Journey speed calculation, PCU-based traffic evaluation, Parking demand estimation, Data visualization (Excel), IRC standard comparison, Field coordination, Report writing, Urban transport planning.</p>
-						<p>Conducted a comprehensive transportation survey addressing road condition, real-time traffic flow, speed and headway monitoring, parking usage, and intersection performance to support data-driven urban transport solutions.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Night_Security_Light">View Project</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Team leading, Traffic data collection and analysis, Traffic surveys (Cross sectional survey, Traffic volume survey, Spot speed survey, Headway survey, Moving observer, Parking survey, Intersection survey), Questionnaire preparation, Roadway... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong> Team leading, Traffic data collection and analysis, Traffic surveys (Cross sectional survey, Traffic volume survey, Spot speed survey, Headway survey, Moving observer, Parking survey, Intersection survey), Questionnaire preparation, Roadway condition assessment, Journey speed calculation, PCU-based traffic evaluation, Parking demand estimation, Data visualization (Excel), IRC standard comparison, Field coordination, Report writing, Urban transport planning.</p>
+						<p>Conducted a comprehensive transportation survey addressing road condition, real-time traffic flow, speed and headway monitoring, parking usage, and intersection performance to support data-driven urban transport solutions.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 
 				<!-- Project 3: Comparative Analysis of Smart Village Potential: Evaluating the Smartness of Botiaghata and Betaga Union -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/DoRa-Block-Battle">Comparative Analysis of Smart Village Potential: Evaluating the Smartness of Botiaghata and Betaga Union</a></h4>
+						<h4><a href="https://github.com/">Comparative Analysis of Smart Village Potential: Evaluating the Smartness of Botiaghata and Betaga Union</a></h4>
 						<p><strong>Course:</strong> Rural Planning Studio </p>
 						<p><strong>Technologies Used:</strong> Statistical analysis, Field surveys, SPSS, ArcGIS.</p>
-
-						<p><strong>Key Skills Applied: </strong> Team leadership, Data collection, Comparative research, Rural planning, Technological assessment, Baseline study, GIS mapping, Statistical analysis, Data Sampling, Local and Global smart village component identification, Report writing.</p>
-
-						<p>A smart village development study comparing Betaga Union and Botiaghata through questionnaire surveys and analysis, focusing on digital healthcare, smart utilities, and education technology to enhance rural living and guide the transformation of Hatbaria Hat into a fully functional smart village.
-</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/DoRa-Block-Battle">View Project</a>
-						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Questionnaire</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Team leadership, Data collection, Comparative research, Rural planning, Technological assessment, Baseline study, GIS mapping,... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong> Team leadership, Data collection, Comparative research, Rural planning, Technological assessment, Baseline study, GIS mapping, Statistical analysis, Data Sampling, Local and Global smart village component identification, Report writing.</p>
+						<p>A smart village development study comparing Betaga Union and Botiaghata through questionnaire surveys and analysis, focusing on digital healthcare, smart utilities, and education technology to enhance rural living and guide the transformation of Hatbaria Hat into a fully functional smart village.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
+						<a class="btn-project" href="https://github.com/">View Questionnaire</a>
 					</div>
 				</div>
 				<!-- Project 1: Heritage Site Restoration Master Plan of The Mosque City of Bagerhat -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Foodier">Heritage Site Restoration Master Plan of The Mosque City of Bagerhat</a></h4>
+						<h4><a href="https://github.com/">Heritage Site Restoration Master Plan of The Mosque City of Bagerhat</a></h4>
 						<p><strong>Course: </strong>Project Planning Studio</p>
-						<p><strong>Key Skills Applied: </strong>DPP structuring, Feasibility analysis, Restoration planning, Stakeholder engagement, Financial evaluation (NPV, IRR, CVM), Logframe development, Environmental impact assessment, Proposal writing and development, Project budgeting, Policy alignment.</p>
-
-						<p>This project simulates a real-world Development Project Proposal (DPP) aimed at restoring seven historic mosques in Bagerhat, a UNESCO World Heritage Site, featuring the conservation of seven historic mosques, infrastructure upgrades, landscaping, and visitor facilities to promote cultural preservation and boost sustainable tourism.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Foodier">View Project</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> DPP structuring, Feasibility analysis, Restoration planning, Stakeholder engagement, Financial evaluation (NPV, IRR, CVM), Logframe development, Environmental impact assessment, Proposal writing and development, Project... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong>DPP structuring, Feasibility analysis, Restoration planning, Stakeholder engagement, Financial evaluation (NPV, IRR, CVM), Logframe development, Environmental impact assessment, Proposal writing and development, Project budgeting, Policy alignment.</p>
+						<p>This project simulates a real-world Development Project Proposal (DPP) aimed at restoring seven historic mosques in Bagerhat, a UNESCO World Heritage Site, featuring the conservation of seven historic mosques, infrastructure upgrades, landscaping, and visitor facilities to promote cultural preservation and boost sustainable tourism.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 				<!-- Project 4: Terms of Reference for Heritage Site Restoration Master Plan of Mosque City of Bagerhat  -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/KUET-BANK">Terms of Reference for Heritage Site Restoration Master Plan of Mosque City of Bagerhat</a></h4>
+						<h4><a href="https://github.com/">Terms of Reference for Heritage Site Restoration Master Plan of Mosque City of Bagerhat</a></h4>
 						<p><strong>Course: </strong>Project Planning Studio</p>
-						<p><strong>Key Skills Applied: </strong>ToR structuring, Policy review, Restoration planning, Stakeholder analysis, Proposal writing.</p>
-						<p>Simulated a Terms of Reference (ToR) for the restoration of seven UNESCO-listed mosques in Bagerhat outlining scope, methodology, stakeholder roles, and timelines. The project emphasized cultural integrity, infrastructure upgrades, sustainable site management, and community engagement. Focus areas covered stakeholder mapping, heritage-sensitive infrastructure planning, structural restoration, utility upgrades, and tourism-oriented development strategies.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/KUET-BANK">View Project</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> ToR structuring, Policy review, Restoration planning, Stakeholder analysis, Proposal writing. <br> Simulated a Terms of Reference (ToR) for the restoration of seven UNESCO-listed mosques in Bagerhat outlining scope, methodology, stakeholder... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong>ToR structuring, Policy review, Restoration planning, Stakeholder analysis, Proposal writing.</p>
+						<p>Simulated a Terms of Reference (ToR) for the restoration of seven UNESCO-listed mosques in Bagerhat outlining scope, methodology, stakeholder roles, and timelines. The project emphasized cultural integrity, infrastructure upgrades, sustainable site management, and community engagement. Focus areas covered stakeholder mapping, heritage-sensitive infrastructure planning, structural restoration, utility upgrades, and tourism-oriented development strategies.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 
 				<!-- Project 7: Enhancing Food Security and Agricultural Resilience in Khulna, Bangladesh-->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Alphabet-Detection">Enhancing Food Security and Agricultural Resilience in Khulna, Bangladesh</a></h4>
+						<h4><a href="https://github.com/">Enhancing Food Security and Agricultural Resilience in Khulna, Bangladesh</a></h4>
 						<p><strong>Course: </strong>Urban Planning Studio</p>
-						<p><strong>Key Skills Applied: </strong> AHP-based multi-criteria decision analysis, GIS & remote sensing (NDVI, LST), Field survey & stakeholder consultation, Urban agriculture & sustainability planning, Data analysis (Excel, GIS), Policy and institutional assessment, Research synthesis & technical reporting</p>
-						<p>An integrated green infrastructure-based urban agriculture initiative that applies the Analytical Hierarchy Process (AHP) and a decision-making framework to identify vacant lands and prioritize factors for rooftop and community gardens, aiming to strengthen food security and urban sustainability in Khulna City.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Alphabet-Detection">View Project</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> AHP-based multi-criteria decision analysis, GIS & remote sensing (NDVI, LST), Field survey & stakeholder consultation, Urban agriculture & sustainability planning, Data analysis (Excel, GIS), Policy and institutional assessment, Research... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong> AHP-based multi-criteria decision analysis, GIS & remote sensing (NDVI, LST), Field survey & stakeholder consultation, Urban agriculture & sustainability planning, Data analysis (Excel, GIS), Policy and institutional assessment, Research synthesis & technical reporting</p>
+						<p>An integrated green infrastructure-based urban agriculture initiative that applies the Analytical Hierarchy Process (AHP) and a decision-making framework to identify vacant lands and prioritize factors for rooftop and community gardens, aiming to strengthen food security and urban sustainability in Khulna City.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 
 				<!-- Project 8: Threshold Population Calculation and Gap identification of different service facilities in Rajshahi Division  -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Automatic-Bill-Generator">Threshold Population Calculation and Gap identification of different service facilities in Rajshahi Division </a></h4>
+						<h4><a href="https://github.com/">Threshold Population Calculation and Gap identification of different service facilities in Rajshahi Division </a></h4>
 						<p><strong>Course: </strong>Reginal Planning Studio</p>
-						<p><strong>Key Skills Applied: </strong> Geospatial analysis, Team leadership, Spatial data analysis, Secondary data collection, GIS-based visualization, Gap identification, Spatial planning, Threshold Population Calculation, Data visualization.</p>
-						<p>A district-wise breakdown of educational, recreational, and healthcare infrastructure in Rajshahi Division identifying threshold population and highlighting gaps and disparities to support equitable infrastructure distribution and inclusive policy reforms.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Automatic-Bill-Generator">View Project</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Geospatial analysis, Team leadership, Spatial data analysis, Secondary data collection, GIS-based visualization, Gap identification, Spatial planning, Threshold... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong> Geospatial analysis, Team leadership, Spatial data analysis, Secondary data collection, GIS-based visualization, Gap identification, Spatial planning, Threshold Population Calculation, Data visualization.</p>
+						<p>A district-wise breakdown of educational, recreational, and healthcare infrastructure in Rajshahi Division identifying threshold population and highlighting gaps and disparities to support equitable infrastructure distribution and inclusive policy reforms.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 
 				<!-- Project 9: Water Scarcity in Rajshahi Division: A feasibility Study for Sustainable Solutions -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Auto-Birthday-Wisher">Water Scarcity in Rajshahi Division: A feasibility Study for Sustainable Solutions</a></h4>
+						<h4><a href="https://github.com/">Water Scarcity in Rajshahi Division: A feasibility Study for Sustainable Solutions</a></h4>
 						<p><strong>Course: </strong>Reginal Planning Studio</p>
-						<p><strong>Key Skills Applied: </strong> Meta-analysis, Data Visualization, Sustainable water management, Statistical analysis, Rainwater Harvesting potential, Urban Planning & Policy Application, Feasibility Analysis, Team leader, Setback Rule Implementation, Presentation & Documentation.</p>
-						<p>Assessed water scarcity in Rajshahi by identifying causes, impacts, and practical solutions. Proposed rainwater harvesting and setback rule enforcement to enhance groundwater recharge and ensure sustainable water management.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Auto-Birthday-Wisher">View Project</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Meta-analysis, Data Visualization, Sustainable water management, Statistical analysis, Rainwater Harvesting potential, Urban Planning & Policy Application, Feasibility Analysis, Team leader, Setback Rule Implementation, Presentation... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong> Meta-analysis, Data Visualization, Sustainable water management, Statistical analysis, Rainwater Harvesting potential, Urban Planning & Policy Application, Feasibility Analysis, Team leader, Setback Rule Implementation, Presentation & Documentation.</p>
+						<p>Assessed water scarcity in Rajshahi by identifying causes, impacts, and practical solutions. Proposed rainwater harvesting and setback rule enforcement to enhance groundwater recharge and ensure sustainable water management.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 
 				<!-- Project 10: Sustainable Desalination Technologies: A Solution to Coastal Water Scarcity in Bangladesh -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Hospital_Management_System">Sustainable Desalination Technologies: A Solution to Coastal Water Scarcity in Bangladesh</a></h4>
-						<p><strong>Segment: Presented at: </strong>The Research Canvas, <strong>Plannation 3.0</strong>, Dept. of Urban and Regional Planning, Khulna University of Engineering & Technology</p>
-						<p><strong>Key Skills Applied: </strong>Renewable energy integration, Cost-benefit analysis, Desalination technology evaluation, Environmental impact assessment, GIS-based mapping, Proposed root level solution, Visual communication (poster design), Research and data synthesis, Strategic planning & policy recommendation</p>
-						<p>Explored solar-powered reverse osmosis (PV-RO) as a cost-effective, low-energy solution to coastal water scarcity in Bangladesh. Compared desalination methods (RO, MSF, MED), identifying PV-RO as most suitable due to high solar potential. Proposed small-scale units, membrane supply networks, and stakeholder collaboration.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Hospital_Management_System">View Project</a>
+						<h4><a href="https://github.com/">Sustainable Desalination Technologies: A Solution to Coastal Water Scarcity in Bangladesh</a></h4>
+						<p><strong>Segment-Presented at: </strong>The Research Canvas, <strong>Plannation 3.0</strong>, Dept. of Urban and Regional Planning, Khulna University of Engineering & Technology</p>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Renewable energy integration, Cost-benefit analysis, Desalination technology... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong>Renewable energy integration, Cost-benefit analysis, Desalination technology evaluation, Environmental impact assessment, GIS-based mapping, Proposed root level solution, Visual communication (poster design), Research and data synthesis, Strategic planning & policy recommendation</p>
+						<p>Explored solar-powered reverse osmosis (PV-RO) as a cost-effective, low-energy solution to coastal water scarcity in Bangladesh. Compared desalination methods (RO, MSF, MED), identifying PV-RO as most suitable due to high solar potential. Proposed small-scale units, membrane supply networks, and stakeholder collaboration.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 
 				<!-- Project 11: Site Introduction and Material Analysis for Designing a Camp House: Hang Sơn Đoòng Cave -->
 				<div class="col-lg-4 col-md-6">
 					<div class="project-card">
-						<h4><a href="https://github.com/MachangDoniel/Kokborok-Compiler">Site Introduction and Material Analysis for Designing a Camp House: Hang Sơn Đoòng Cave</a></h4>
+						<h4><a href="https://github.com/">Site Introduction and Material Analysis for Designing a Camp House: Hang Sơn Đoòng Cave</a></h4>
 						<p><strong>Course: </strong> Basic Design in Architecture</p>
-						<p><strong>Key Skills Applied: </strong> Climate-responsive architectural design, Site analysis, Sustainable material sourcing, Vernacular Architecture, Survival planning & risk management, Visual mapping, Presentation & technical communication. </p>
-						<p>Designed a climate-responsive camp house in Hang Sơn Đoòng—the world’s largest cave— considering site safety, resource availability, and environmental sensitivity using local materials. Selected a safe site near Doline 2 based on geological, climatic, and ecological analysis. Planned for shelter, water, food, sanitation, and fire safety.</p>
-						<a class="btn-project" href="https://github.com/MachangDoniel/Kokborok-Compiler">View Project</a>
+						<p class="project-description">
+							<strong>Key Skills Applied: </strong> Climate-responsive architectural design, Site analysis, Sustainable material sourcing, Vernacular Architecture, Survival planning & risk management, Visual mapping, Presentation & technical communication. ... <button class="toggle-btn" onclick="toggleDescription(this)">Show more</button>
+						</p>
+						<!-- <p><strong>Key Skills Applied: </strong> Climate-responsive architectural design, Site analysis, Sustainable material sourcing, Vernacular Architecture, Survival planning & risk management, Visual mapping, Presentation & technical communication. </p>
+						<p>Designed a climate-responsive camp house in Hang Sơn Đoòng—the world’s largest cave— considering site safety, resource availability, and environmental sensitivity using local materials. Selected a safe site near Doline 2 based on geological, climatic, and ecological analysis. Planned for shelter, water, food, sanitation, and fire safety.</p> -->
+						<a class="btn-project" href="https://github.com/">View Project</a>
 					</div>
 				</div>
 			</div>
@@ -468,7 +704,8 @@
 						<a class="btn-project" href="https://tiller.com.bd/" target="_blank">Visit Tiller</a>
 					</div>
 				</div>
-		</div>
+			</div>
+			<div class="row">
 				<!-- Experience 2: Research Assistant -->
 				<div class="col-lg-12">
 					<div class="project-card">
@@ -485,6 +722,7 @@
 						<a class="btn-project" href="https://www.linkedin.com/company/center-for-environmental-research-cer/posts/?feedView=all" target="_blank">Visit CER</a>
 					</div>
 				</div>
+			</div>
 		</div>
 	</section>
 
@@ -520,7 +758,7 @@
 
 
 	<!-- Footer Section -->
-	<footer class="footer_area">
+	<footer class="footer_area" style="padding: 0px;">
 		<div class="container">
 			<div class="row justify-content-center">
 				<div class="col-lg-12 text-center">
@@ -551,6 +789,10 @@
 
 </html>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
 <script>
 	// JavaScript to handle mailto action with dynamic content
     document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -572,4 +814,56 @@
 
     // JavaScript to display last modified date
     document.getElementById('lastModifiedDate').innerHTML = "Last Modified: " + document.lastModified;
+</script>
+
+
+<script>
+	let slideIndex = 0;
+	let slideInterval;
+
+	function showSlides() {
+		const slides = document.getElementsByClassName("mySlides");
+		const dots = document.getElementsByClassName("dot");
+
+		for (let i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (let i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+
+		slideIndex++;
+		if (slideIndex > slides.length) {
+			slideIndex = 1;
+		}
+		if (slideIndex < 1) {
+			slideIndex = slides.length;
+		}
+
+		slides[slideIndex - 1].style.display = "block";
+		slides[slideIndex - 1].classList.add("fade");
+
+		dots[slideIndex - 1].className += " active";
+	}
+
+	function startSlideShow() {
+		showSlides();
+		slideInterval = setInterval(showSlides, 5000); // 5s display + 1s animation
+	}
+
+	function plusSlides(n) {
+		clearInterval(slideInterval);
+		slideIndex += n - 1;
+		startSlideShow();
+	}
+
+	function currentSlide(n) {
+		clearInterval(slideInterval);
+		slideIndex = n - 1;
+		startSlideShow();
+	}
+
+	window.onload = () => {
+		startSlideShow();
+	};
 </script>
