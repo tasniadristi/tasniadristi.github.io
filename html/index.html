@@ -2,624 +2,409 @@
 <html lang="en">
 
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/favicon.png" type="image/png">
-	<title>Satner Portfolio</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Tasnia Nowrin - Urban and Regional Planning, GIScience, remote sensing, spatial analysis, machine learning, environmental change, mobility, access to services, and spatial inequality.">
+    <meta name="keywords" content="Tasnia Nowrin, GIS, GIScience, remote sensing, spatial analysis, urban planning, regional planning, climate exposure, environmental health, KUET">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Tasnia Nowrin - Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { color: #2d3e2e; }
+        h2 { color: #69C052; }
+        .section_gap { padding: 90px 0; }
+        .section-intro { max-width: 960px; margin-bottom: 28px; color: #3c4b3c; }
+        .profile-card, .project-card, .thesis-card, .education-card, .skill-card, .publication-card, .contact-card {
+            border: 1px solid #cfead8;
+            border-radius: 10px;
+            padding: 22px;
+            margin-bottom: 22px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(76, 175, 80, 0.10);
+            background: linear-gradient(to top right, #ecfdf5, #d8f5e0);
+            min-height: 100%;
+        }
+        .project-card:hover, .education-card:hover, .skill-card:hover, .publication-card:hover, .contact-card:hover, .thesis-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(76, 175, 80, 0.22);
+        }
+        .project-card h4, .education-card h4, .skill-card h4, .publication-card h4, .thesis-card h4, .contact-card h4 {
+            font-size: 1.16rem;
+            font-weight: 700;
+            color: #46815C;
+        }
+        .project-card p, .education-card p, .skill-card p, .publication-card p, .thesis-card p, .contact-card p { color: #3c4b3c; }
+        .project-card a, .publication-card a, .contact-card a { color: #3e7451; }
+        .primary_btn {
+            display: inline-block;
+            color: #3e0738;
+            letter-spacing: 0px;
+            font-family: "Rubik", sans-serif;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 46px;
+            outline: none !important;
+            text-align: center;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 5px;
+            background-origin: border-box;
+            background-clip: content-box, border-box;
+            background-image: linear-gradient(to right, #ff69b4 0%, #ffb6c1 100%), radial-gradient(circle at top left, #ff69b4, #ffb6c1);
+            border: double 2px transparent;
+            box-shadow: 0px 10px 30px rgba(255, 105, 180, 0.3);
+            margin-right: 12px;
+        }
+        .primary_btn span { padding: 0 34px; }
+        .primary_btn:hover {
+            background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #ff69b4, #ffb6c1);
+            border: 2px solid #ffb6c1;
+            color: #210ce6;
+            box-shadow: none;
+            background-clip: border-box;
+        }
+        .tagline { font-size: 1.05rem; line-height: 1.7; }
+        .small-label { text-transform: uppercase; color: #5a8f69; font-weight: 700; letter-spacing: 0.04em; }
+        .skill-pill {
+            display: inline-block;
+            padding: 8px 12px;
+            margin: 5px 5px 5px 0;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.75);
+            color: #315e40;
+            border: 1px solid #cfead8;
+            font-size: 0.92rem;
+        }
+        .publication-list { padding-left: 20px; }
+        .publication-list li { margin-bottom: 14px; line-height: 1.65; }
+        .timeline-date { color: #2e7d32; font-weight: 700; }
+        .contact-line { margin-bottom: 10px; }
+        .social-links a { margin-right: 15px; font-size: 1.5rem; color: #007bff; }
+        .social-links a:hover { color: #0056b3; }
+        .slideshow-container { max-width: 1000px; position: relative; margin: auto; }
+        .mySlides { display: none; }
+        .prev, .next {
+            cursor: pointer; position: absolute; top: 50%; width: auto; margin-top: -22px;
+            padding: 16px; color: white; font-weight: bold; font-size: 18px; transition: 0.6s ease;
+            border-radius: 0 3px 3px 0; user-select: none;
+        }
+        .next { right: 0; border-radius: 3px 0 0 3px; }
+        .prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+        .text {
+            color: #f2f2f2; font-size: 15px; padding: 8px 12px; position: absolute; bottom: 0;
+            width: 100%; text-align: center; background: linear-gradient(to right, rgba(34,34,34,0.8), rgba(0,0,0,0.6));
+            backdrop-filter: blur(2px);
+        }
+        .numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; }
+        .dot { cursor: pointer; height: 15px; width: 15px; margin: 0 2px; background-color: #bbb; border-radius: 50%; display: inline-block; transition: background-color 0.6s ease; }
+        .active, .dot:hover { background-color: #717171; }
+        .fade { animation-name: fade; animation-duration: 5s; }
+        @keyframes fade { from {opacity: .4} to {opacity: 1} }
+        @media (max-width: 767px) {
+            .section_gap { padding: 55px 15px; }
+            .primary_btn { margin-bottom: 12px; }
+            .primary_btn span { padding: 0 22px; }
+        }
+    </style>
 </head>
 
 <body>
+    <header class="header_area">
+        <div class="main_menu">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
+                    <a class="navbar-brand logo_h" href="index.html" style="padding-top: 0px;"><img src="img/banner/logo.png" alt="Tasnia Nowrin" style="max-height: 60px;"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav justify-content-end">
+                            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-	<!--================ Start Header Area =================-->
-	<header class="header_area">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-							<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================ End Header Area =================-->
+    <section id="home" class="home_banner_area">
+        <div class="banner_inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7" style="align-self: end;">
+                        <div class="banner_content">
+                            <h1 class="text-uppercase" id="typewriter"></h1>
+                            <p class="tagline">Urban &amp; Regional Planning | GIScience, Remote Sensing &amp; Spatial Analysis | Aspiring PhD Researcher</p>
+                            <div class="d-flex align-items-center flex-wrap">
+                                <a href="resume/Final_CV.pdf" target="_blank" class="primary_btn"><span>Download CV</span></a>
+                                <a class="primary_btn" href="mailto:tasniannowrin@gmail.com"><span>Contact Me</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="home_right_img">
+                            <img class="img-fluid" src="img/banner/Avater_Tasnia.png" alt="Tasnia Nowrin avatar">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!--================ Start Home Banner Area =================-->
-	<section class="home_banner_area">
-		<div class="banner_inner">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-7">
-						<div class="banner_content">
-							<h3 class="text-uppercase">Hell0</h3>
-							<h1 class="text-uppercase">I am Doniel Tripura</h1>
-							<h5 class="text-uppercase">senior wordpress developer</h5>
-							<div class="d-flex align-items-center">
-								<a class="primary_btn" href="#"><span>Hire Me</span></a>
-								<a class="primary_btn tr-bg" href="#"><span>Get CV</span></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-5">
-						<div class="home_right_img">
-							<img class="" src="img/banner/home-right.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Home Banner Area =================-->
+    <section id="about" class="about_area section_gap">
+        <div class="container">
+            <div class="row justify-content-start align-items-center">
+                <div class="col-lg-5" style="padding: 0px;">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="img/Images for Portfolio/Deans_Award_Receive.jpg" alt="Receiving Dean's Award" style="width:100%">
+                            <div class="text">Receiving Dean's Award for Academic Excellence</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="img/Images for Portfolio/Internship_Award_2.jpg" alt="Receiving internship certificate from Tiller" style="width:100%">
+                            <div class="text">Receiving Internship Certification from Tiller</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="img/Images for Portfolio/Hall_Award_1.jpg" alt="Receiving undergraduate completion award" style="width:100%">
+                            <div class="text">Receiving the Undergraduate Completion Award</div>
+                        </div>
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="main_title text-left" style="margin-left: 18px;">
+                        <h2>About Me</h2>
+                        <p>I am an urban and regional planning researcher with academic and research experience in addressing planning problems through geospatial and statistical tools, technologies, and policy-driven approaches.</p>
+                        <p>My research interests focus on <strong>GIScience, remote sensing, spatial analysis, machine learning, and data-driven methods</strong> to study urban growth, environmental change, mobility, access to services, and spatial inequality.</p>
+                        <p>At the <a href="https://www.linkedin.com/company/center-for-environmental-research-cer/posts/?feedView=all" target="_blank">Center for Environmental Research (CER)</a>, I contribute to research on environmental change, air pollution, transportation, and public health using GIS, Google Earth Engine, ArcGIS, Python, and statistical analysis. I also completed an internship at <a href="https://tiller.com.bd/" target="_blank">Tiller</a>, where I worked on risk-sensitive spatial databases, land-use zoning, and Mouza map scaling.</p>
+                        <p>I am eager to explore new technologies and interdisciplinary methods in GIScience, remote sensing, climate exposure, environmental health, built-environment vulnerability, and spatial inequality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!--================ Start About Us Area =================-->
-	<section class="about_area section_gap">
-		<div class="container">
-			<div class="row justify-content-start align-items-center">
-				<div class="col-lg-5">
-					<div class="about_img">
-						<img class="" src="img/about-us.png" alt="">
-					</div>
-				</div>
+    <section id="education" class="section_gap">
+        <div class="container">
+            <div class="main_title text-left"><h2>Education</h2></div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="education-card">
+                        <p class="timeline-date">2026 - Expected Jan 2027</p>
+                        <h4>Master of Urban &amp; Regional Planning</h4>
+                        <p>Faculty of Civil Engineering, Khulna University of Engineering &amp; Technology (KUET)</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="education-card">
+                        <p class="timeline-date">2020 - 2025</p>
+                        <h4>Bachelor of Urban &amp; Regional Planning</h4>
+                        <p>Faculty of Civil Engineering, Khulna University of Engineering &amp; Technology (KUET)</p>
+                        <p><strong>CGPA:</strong> 3.97 on 4.00 | <strong>Position:</strong> 1st in all academic years</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="education-card">
+                        <p class="timeline-date">2017 - 2019</p>
+                        <h4>Higher Secondary Certificate (Science)</h4>
+                        <p>RAJUK Uttara Model College | GPA 5.00 on 5.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				<div class="offset-lg-1 col-lg-5">
-					<div class="main_title text-left">
-						<h2>let’s <br>
-							Introduce about <br>
-							myself</h2>
-						<p>
-							Whose given. Were gathered. There first subdue greater. Bearing you Whales heaven 
-							midst their. Beast creepeth. Fish days.
-						</p>
-						<p>
-							Is give may shall likeness made yielding spirit a itself together created after sea 
-							is in beast beginning signs open god you're gathering whose gathered cattle let. 
-							Creature whales fruit unto meat the life beginning all in under give two.
-						</p>
-						<a class="primary_btn" href="#"><span>Download CV</span></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End About Us Area =================-->
+    <section id="research" class="research_area section_gap">
+        <div class="container">
+            <div class="main_title text-left"><h2>Research &amp; Publications</h2></div>
+            <div class="thesis-card">
+                <p class="small-label">Bachelor's Thesis</p>
+                <h4>Urban Growth Dynamics and Socioeconomic Drivers in Khulna: A Spatiotemporal Perspective</h4>
+                <p><strong>Supervisor:</strong> Professor Dr. Md. Manjur Morshed</p>
+                <p>An urban expansion analysis using remote sensing and socioeconomic indicators from 2000-2024, integrating binary classification, spatial statistics, geographic distribution analysis, JavaScript, and GIS.</p>
+                <p><strong>Methods &amp; tools:</strong> Remote sensing, GIS, spatial statistics, Google Earth Engine, JavaScript, ArcGIS, Python, SPSS, Excel</p>
+            </div>
+            <div class="publication-card">
+                <h4>Publications &amp; Research Outputs <span style="font-size: 0.85rem; font-weight: 400;">(published as "Mst. Tasnia Nowrin")</span></h4>
+                <ol class="publication-list">
+                    <li>Nowrin, M. T., Rahman, M., Hasan, M. M., &amp; Hasan, M. M. (2026). <em>Price Hikes, Sustainability, and SDG Achievement Among Lower-Income Groups in Urban Bangladesh.</em> Submitted to <em>Social Studies Research and Practice</em>, Emerald.</li>
+                    <li>Al Kafy, A., Nowrin, M. T., Altuwaijri, H. A., &amp; Mukarram, M. M. T. (2025). <em>Advanced hybrid ensemble learning models for atmospheric humidity prediction: An environmental monitoring solution in arid regions.</em> <em>International Journal of Environmental Science and Technology.</em> Published.</li>
+                    <li>Nowrin, M. T. &amp; Mohiuddin, T. (2025, February). <em>Sustainable Desalination Technologies: A Solution to Coastal Water Scarcity in Bangladesh.</em> Poster presentation, Plannation 3.0, Khulna University of Engineering &amp; Technology (KUET), Khulna, Bangladesh.</li>
+                    <li>Fattah, M. A., Rahman, M., Hasan, M. M., Hasan, M. M., Nowrin, M. T., Morshed, S. R., Chakraborty, T., Al Kafy, A., Alsulamy, S., Khedher, K. M., &amp; Shohan, A. A. A. (2023). <em>Sustainability amidst economic strain: A quantitative exploration of COVID-19 induced food insecurity, obesity, and inflation impacts on health and sanitation in urban slums.</em> Unpublished manuscript.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
 
-	<!--================ Srart Brand Area =================-->
-	<section class="brand_area section_gap_bottom">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-6">
-					<div class="row">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo1.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo2.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo3.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo4.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo5.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo6.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo7.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo8.png" alt="">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo9.png" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="offset-lg-2 col-lg-4 col-md-6">
-					<div class="client-info">
-						<div class="d-flex mb-50">
-							<span class="lage">10</span>
-							<span class="smll">Years Experience Working</span>
-						</div>
-						<div class="call-now d-flex">
-							<div>
-								<span class="fa fa-phone"></span>
-							</div>
-							<div class="ml-15">
-								<p>call us now</p>
-								<h3>(+1)-800-555-6789</h3>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Brand Area =================-->
+    <section id="projects" class="projects_area section_gap">
+        <div class="container">
+            <div class="main_title text-left"><h2>Projects</h2></div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6"><div class="project-card"><h4>Sustainable Desalination Technologies</h4><p>PV-RO technology planning with GIS mapping for coastal water security in Bangladesh.</p><p><strong>Focus:</strong> Desalination, renewable energy integration, GIS-based mapping, coastal water scarcity.</p></div></div>
+                <div class="col-lg-4 col-md-6"><div class="project-card"><h4>Water Scarcity in Rajshahi Division</h4><p>A feasibility study for sustainable solutions using meta-analysis and GIS-based rainwater harvesting and recharge strategy.</p><p><strong>Focus:</strong> Water scarcity, rainwater harvesting, groundwater recharge, policy planning.</p></div></div>
+                <div class="col-lg-4 col-md-6"><div class="project-card"><h4>Transportation Surveys</h4><p>Traffic surveys, AutoCAD, GIS, and Excel for intersection and mobility analysis.</p><p><strong>Focus:</strong> Traffic data, intersection analysis, mobility planning, transport assessment.</p></div></div>
+                <div class="col-lg-4 col-md-6"><div class="project-card"><h4>Regional Economics Analysis of Rajshahi Division</h4><p>Used PCA, SPSS, and GIS to map economic disparities and support regional planning diagnostics.</p><p><strong>Focus:</strong> Spatial inequality, PCA, economic disparity mapping, regional development.</p></div></div>
+                <div class="col-lg-4 col-md-6"><div class="project-card"><h4>Comparative Analysis of Smart Village Potential</h4><p>Evaluated the smartness of Botiaghata and Betaga Union through field and questionnaire surveys, GIS, and SPSS-based assessment of digital infrastructure.</p><p><strong>Focus:</strong> Rural planning, digital infrastructure, smart village assessment, GIS.</p></div></div>
+                <div class="col-lg-4 col-md-6"><div class="project-card"><h4>Assessment of Child Friendliness in Ispahani Colony, Khulna</h4><p>Conducted statistical analysis, field surveys, and questionnaire surveys to assess child-friendly conditions.</p><p><strong>Focus:</strong> Socio-environmental assessment, statistical analysis, community surveys.</p></div></div>
+                <div class="col-lg-4 col-md-6"><div class="project-card"><h4>Heritage Restoration - The Mosque City of Bagerhat</h4><p>Developed DPP and ToR with feasibility, budgeting, impact analysis, and stakeholder mapping.</p><p><strong>Focus:</strong> Heritage planning, feasibility assessment, stakeholder engagement, project planning.</p></div></div>
+            </div>
+        </div>
+    </section>
 
-	<!--================ Start Features Area =================-->
-	<section class="features_area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>service offers </h2>
-						<p>
-							Is give may shall likeness made yielding spirit a itself togeth created 
-							after sea <br> is in beast beginning signs open god you're gathering ithe
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="row feature_inner">
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s1.png" alt="">
-						<h4>Wp developing</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s2.png" alt="">
-						<h4>UI/ux design</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s3.png" alt="">
-						<h4>Web design</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="feature_item">
-						<img src="img/services/s4.png" alt="">
-						<h4>seo optimize</h4>
-						<p>Creeping for female light years that lesser can't evening heaven isn't bearing tree</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Features Area =================-->
+    <section id="experience" class="experience_area section_gap">
+        <div class="container">
+            <div class="main_title text-left"><h2>Professional Experience</h2></div>
+            <div class="project-card">
+                <p class="timeline-date">2024 - Ongoing</p>
+                <h4>Research Assistant - Center for Environmental Research (CER)</h4>
+                <ul>
+                    <li>Contributed to multidisciplinary research on environmental change, air pollution, transportation, and public health using GIS, Google Earth Engine, ArcGIS, Python, and statistical analysis.</li>
+                    <li>Supported climate- and exposure-related data processing, spatial modeling, visualization, and interpretation for policy-relevant environmental research.</li>
+                    <li>Assisted in manuscript preparation, literature review, data collection, and research documentation for climate, transport, and public-health-related studies.</li>
+                </ul>
+                <a class="btn-project" href="https://www.linkedin.com/company/center-for-environmental-research-cer/posts/?feedView=all" target="_blank">Visit CER</a>
+            </div>
+            <div class="project-card">
+                <p class="timeline-date">Oct 2024</p>
+                <h4>Intern - Tiller, Dhaka, Bangladesh</h4>
+                <ul>
+                    <li>Contributed to the "Preparation of Risk Sensitive Database for Core Area of Rangpur and Sylhet District Town (SRDP)" project.</li>
+                    <li>Assisted in preparing land-use zoning and Mouza maps scaling using GIS for risk-sensitive planning.</li>
+                    <li>Gained hands-on experience with urban spatial data processing and risk-sensitive zoning practices.</li>
+                </ul>
+                <a class="btn-project" href="https://tiller.com.bd/" target="_blank">Visit Tiller</a>
+            </div>
+        </div>
+    </section>
 
-	<!--================Start Portfolio Area =================-->
-	<section class="portfolio_area" id="portfolio">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="main_title text-left">
-						<h2>quality work <br>
-							Recently done project </h2>
-					</div>
-				</div>
-			</div>
-			<div class="filters portfolio-filter">
-				<ul>
-					<li class="active" data-filter="*">all</li>
-					<li data-filter=".popular">popular</li>
-					<li data-filter=".latest"> latest</li>
-					<li data-filter=".following">following</li>
-					<li data-filter=".upcoming">upcoming</li>
-				</ul>
-			</div>
-	
-			<div class="filters-content">
-				<div class="row portfolio-grid justify-content-center">
-					<div class="col-lg-4 col-md-6 all latest">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p1.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p1.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">minimal design</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p2.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p2.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">Paint wall</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all latest">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p3.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p3.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">female light</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p4.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p4.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">fourth air</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p6.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p5.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">together sign</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all upcoming">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p5.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p6.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">multiply fowl</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all upcoming following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p7.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p7.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">green heaven</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p8.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p8.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4>fly male</h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all upcoming">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p9.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p9.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">season face</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Portfolio Area =================-->
+    <section id="skills" class="section_gap">
+        <div class="container">
+            <div class="main_title text-left"><h2>Skills</h2></div>
+            <div class="row">
+                <div class="col-lg-6"><div class="skill-card"><h4>Coding</h4><span class="skill-pill">Python</span><span class="skill-pill">JavaScript</span><span class="skill-pill">C</span><span class="skill-pill">R</span></div></div>
+                <div class="col-lg-6"><div class="skill-card"><h4>Tools &amp; Software</h4><span class="skill-pill">ArcGIS</span><span class="skill-pill">Google Earth Engine</span><span class="skill-pill">Google Earth Pro</span><span class="skill-pill">SPSS</span><span class="skill-pill">Excel</span><span class="skill-pill">AutoCAD</span><span class="skill-pill">SketchUp</span><span class="skill-pill">MS Office</span></div></div>
+                <div class="col-lg-6"><div class="skill-card"><h4>Spatial &amp; Quantitative Methods</h4><span class="skill-pill">Network Analysis</span><span class="skill-pill">Remote Sensing</span><span class="skill-pill">GIS-Based Modeling</span><span class="skill-pill">Spatial Analysis</span><span class="skill-pill">Machine Learning</span></div></div>
+                <div class="col-lg-6"><div class="skill-card"><h4>Professional &amp; Language</h4><span class="skill-pill">Project Management</span><span class="skill-pill">Stakeholder Engagement</span><span class="skill-pill">Teamwork</span><span class="skill-pill">Leadership</span><span class="skill-pill">Communication under Pressure</span><span class="skill-pill">Bangla - Native</span><span class="skill-pill">English - Proficient</span></div></div>
+            </div>
+        </div>
+    </section>
 
-	<!--================ Start Testimonial Area =================-->
-	<div class="testimonial_area section_gap_bottom">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-8 text-center">
-					<div class="main_title">
-						<h2>client say about me</h2>
-						<p>Is give may shall likeness made yielding spirit a itself togeth created after sea is in beast <br>
-							 beginning signs open god you're gathering ithe</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="testi_slider owl-carousel">
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="img/testimonials/t1.jpg" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Elite Martin</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="img/testimonials/t2.jpg" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Davil Saden</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="img/testimonials/t1.jpg" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Elite Martin</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="img/testimonials/t2.jpg" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Davil Saden</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="img/testimonials/t1.jpg" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Elite Martin</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        			<div class="testi_item">
-        				<div class="row">
-        					<div class="col-lg-4">
-        						<img src="img/testimonials/t2.jpg" alt="">
-        					</div>
-        					<div class="col-lg-8">
-        						<div class="testi_text">
-        							<h4>Davil Saden</h4>
-									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-			</div>
-		</div>
-	</div>
-	<!--================ End Testimonial Area =================-->
+    <section id="awards" class="achievements_area section_gap">
+        <div class="container">
+            <div class="main_title text-left"><h2>Awards &amp; Leadership</h2></div>
+            <div class="row">
+                <div class="col-lg-4"><div class="project-card"><h4>Dean's Award for Academic Excellence</h4><p>Faculty of Civil Engineering, Khulna University of Engineering &amp; Technology (KUET)</p><p><strong>Sessions:</strong> 2019-20, 2020-21, 2021-22</p></div></div>
+                <div class="col-lg-4"><div class="project-card"><h4>Technical and Compensatory Scholarship</h4><p>Khulna University of Engineering &amp; Technology (KUET)</p><p><strong>Sessions:</strong> 2019-20, 2020-21, 2021-22</p></div></div>
+                <div class="col-lg-4"><div class="project-card"><h4>Leadership &amp; Extracurricular</h4><p><strong>Volunteer:</strong> Plannation 3.0 (2025)</p><p><strong>Team Leader:</strong> Academic Lab Projects (2020-2024)</p><p><strong>Co-Organizational Secretary:</strong> KUET Theatre (2020-2023)</p></div></div>
+            </div>
+        </div>
+    </section>
 
-	<!--================ Start Newsletter Area =================-->
-	<section class="newsletter_area">
-		<div class="container">
-			<div class="row justify-content-center align-items-center">
-				<div class="col-lg-12">
-					<div class="subscription_box text-center">
-						<h2 class="text-uppercase text-white">get update from anywhere</h2>
-						<p class="text-white">
-							Bearing Void gathering light light his eavening unto dont afraid. 
-						</p>
-						<div class="subcribe-form" id="mc_embed_signup">
-							<form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">
-								<input name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required="" type="email">
-								<div style="position: absolute; left: -5000px;">
-									<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-								</div>
-								<button class="primary-btn hover d-inline">Get Started</button>
-								<div class="info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================ End Newsletter Area =================-->
+    <section id="contact" class="contact_area section_gap">
+        <div class="container">
+            <div class="main_title text-left"><h2>Contact Me</h2></div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <h4>Tasnia Nowrin</h4>
+                        <p class="contact-line"><i class="fa fa-map-marker"></i> Mirpur 14, Dhaka, Bangladesh</p>
+                        <p class="contact-line"><i class="fa fa-phone"></i> <a href="tel:+8801533675388">+880 1533 67 53 88</a></p>
+                        <p class="contact-line"><i class="fa fa-envelope"></i> <a href="mailto:tasniannowrin@gmail.com">tasniannowrin@gmail.com</a></p>
+                        <p class="contact-line"><i class="fa fa-globe"></i> <a href="https://tasniadristi.github.io/" target="_blank">tasniadristi.github.io</a></p>
+                        <p style="margin-top: 18px;"><a class="primary_btn" href="mailto:tasniannowrin@gmail.com?subject=Research%20Opportunity"><span>Send Email</span></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<!--================Footer Area =================-->
-	<footer class="footer_area">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-lg-12">
-					<div class="footer_top flex-column">
-						<div class="footer_logo">
-							<a href="#">
-								<img src="img/logo.png" alt="">
-							</a>
-							<h4>Follow Me</h4>
-						</div>
-						<div class="footer_social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row footer_bottom justify-content-center">
-				<p class="col-lg-8 col-sm-12 footer-text">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		</div>
-	</footer>
-	<!--================End Footer Area =================-->
+    <footer class="footer_area" style="padding: 0px;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 text-center">
+                    <div class="footer_top">
+                        <h4>Follow Me</h4>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/tasnia-nowrin-250972189/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                            <a href="https://github.com/tasniadristi" target="_blank" aria-label="GitHub"><i class="fa fa-github"></i></a>
+                            <a href="mailto:tasniannowrin@gmail.com" aria-label="Email"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                    <p id="lastModifiedDate">Last Modified: </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-	<!-- Optional JavaScript -->
-	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/stellar.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-	<script src="vendors/isotope/isotope-min.js"></script>
-	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<!--gmaps Js-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-	<script src="js/gmaps.min.js"></script>
-	<script src="js/theme.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/theme.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const el = document.getElementById("typewriter");
+        const processedText = "Hello! I'm\n Tasnia Nowrin";
+        let i = 0;
+        const speed = 40;
+        function typeWriter() {
+          if (i < processedText.length) {
+            const currentChar = processedText.charAt(i);
+            if (currentChar === "\n") { el.innerHTML += "<br/>"; }
+            else { el.innerHTML += currentChar; }
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+        el.innerHTML = "";
+        typeWriter();
+        document.getElementById("lastModifiedDate").innerHTML = "Last Modified: " + document.lastModified;
+      });
+    </script>
+    <script>
+      let slideIndex = 0;
+      let slideInterval;
+      function showSlides() {
+        const slides = document.getElementsByClassName("mySlides");
+        const dots = document.getElementsByClassName("dot");
+        for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+        for (let i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }
+        if (slideIndex < 1) { slideIndex = slides.length; }
+        if (slides.length > 0) { slides[slideIndex - 1].style.display = "block"; slides[slideIndex - 1].classList.add("fade"); }
+        if (dots.length > 0) { dots[slideIndex - 1].className += " active"; }
+      }
+      function startSlideShow() { showSlides(); slideInterval = setInterval(showSlides, 5000); }
+      function plusSlides(n) { clearInterval(slideInterval); slideIndex += n - 1; startSlideShow(); }
+      function currentSlide(n) { clearInterval(slideInterval); slideIndex = n - 1; startSlideShow(); }
+      window.onload = () => { startSlideShow(); };
+    </script>
 </body>
-
 </html>
